@@ -12,6 +12,7 @@ class DLL0 Dll0
 
 public:
     int Add(int x, int y){ return x+y;}
+    float  Add(float x, float y) {return x+y ;}
     Dll0();
 };
 
