@@ -1,12 +1,17 @@
 #ifndef DLL0_H
 #define DLL0_H
 
-#include "dll0_global.h"
+#if defined(DLL0_LIBRARY)
+#  define DLL0 __declspec(dllexport)
+#else
+#  define DLL0 __declspec(dllimport)
+#endif
 
-class DLL0SHARED_EXPORT Dll0
+class DLL0 Dll0
 {
 
 public:
+    int Add(int x, int y){ return x+y;}
     Dll0();
 };
 
